@@ -1,375 +1,386 @@
+---
+import "../styles/global.css";
+---
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Stack Evaluation Matrix</title>
   </head>
-  <body>
-    <div class="container">
-        <div class="header">
-            <h1>Tech Stack Evaluation Matrix for Hillsdale College</h1>
-            <p style="margin: 8px 0 0 0; opacity: 0.9; font-size: 14px;">Scoring: 5 = Excellent, 4 = Very Good, 3 = Good, 2 = Fair, 1 = Poor</p>
+  <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
+    <div class="max-w-7xl mx-auto p-6">
+        <div class="mb-10 text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Tech Stack Evaluation Matrix</h1>
+            <p class="text-lg text-gray-600">Hillsdale College Digital Strategy</p>
+            <p class="mt-3 text-sm text-gray-500 bg-white px-4 py-2 rounded-full inline-block shadow-sm">Scoring: 5 = Excellent, 4 = Very Good, 3 = Good, 2 = Fair, 1 = Poor</p>
         </div>
-        
-        <div class="matrix-container">
-            <table>
-                <thead>
+        <div class="overflow-x-auto rounded-xl shadow-2xl bg-white border border-gray-200">
+            <table class="min-w-full text-sm">
+                <thead class="bg-gradient-to-r from-gray-50 to-gray-100">
                     <tr>
-                        <th class="criteria-header">Evaluation Criteria</th>
-                        <th class="stack-header">Hillsdale Preferred<br><small>(Azure + Payload + React)</small></th>
-                        <th class="stack-header">WordPress Decoupled<br><small>(Managed Hosting)</small></th>
-                        <th class="stack-header">Sanity + Next.js<br><small>(Vercel/Netlify)</small></th>
-                        <th class="stack-header">Astro + Strapi<br><small>(Islands Architecture)</small></th>
+                        <th class="px-6 py-4 font-bold text-gray-700 border-b border-gray-200 text-left">Evaluation Criteria</th>
+                        <th class="px-6 py-4 font-bold text-gray-700 border-b border-gray-200 text-center">Hillsdale Preferred<br><span class="text-xs font-normal text-gray-500 mt-1 block">(Azure + Payload + React)</span></th>
+                        <th class="px-6 py-4 font-bold text-gray-700 border-b border-gray-200 text-center">WordPress Decoupled<br><span class="text-xs font-normal text-gray-500 mt-1 block">(Managed Hosting)</span></th>
+                        <th class="px-6 py-4 font-bold text-gray-700 border-b border-gray-200 text-center">Sanity + Next.js<br><span class="text-xs font-normal text-gray-500 mt-1 block">(Vercel/Netlify)</span></th>
+                        <th class="px-6 py-4 font-bold text-gray-700 border-b border-gray-200 text-center">Astro + Strapi<br><span class="text-xs font-normal text-gray-500 mt-1 block">(Islands Architecture)</span></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="category-row">
-                        <td colspan="5"><strong>TECHNICAL CAPABILITIES</strong></td>
+                    <tr class="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100">
+                        <td colspan="5" class="px-6 py-3 font-bold text-blue-900 text-lg">TECHNICAL CAPABILITIES</td>
                     </tr>
-                    <tr>
-                        <td class="criteria-cell">Content Management & APIs</td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Payload CMS offers good headless capabilities, but newer platform with smaller ecosystem</div>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Content Management & APIs</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Payload CMS offers good headless capabilities, but newer platform with smaller ecosystem</div>
                         </td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">WordPress REST API mature but performance can be inconsistent at scale</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">WordPress REST API mature but performance can be inconsistent at scale</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Excellent real-time collaboration, powerful query language (GROQ)</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Excellent real-time collaboration, powerful query language (GROQ)</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Strapi's flexible API + Astro's content-optimized build system</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="criteria-cell">Performance & Scalability</td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Azure + Cloudflare provides excellent performance, Kubernetes adds complexity</div>
-                        </td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">WordPress performance varies by hosting provider, requires optimization</div>
-                        </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Fast CDN delivery, real-time updates, optimized for performance</div>
-                        </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Astro's islands architecture = minimal JS, exceptional Core Web Vitals</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Strapi's flexible API + Astro's content-optimized build system</div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="criteria-cell">Developer Experience</td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">Modern stack but Azure DevOps + Kubernetes complexity</div>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Performance & Scalability</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Azure + Cloudflare provides excellent performance, Kubernetes adds complexity</div>
                         </td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Familiar to many developers, large community, but legacy architecture</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">WordPress performance varies by hosting provider, requires optimization</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Outstanding studio experience, live previews, excellent developer tools</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Fast CDN delivery, real-time updates, optimized for performance</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Excellent DX - Astro's intuitive components + Strapi's flexible backend</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Astro's islands architecture = minimal JS, exceptional Core Web Vitals</div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="criteria-cell">Multi-site Management</td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Good multi-tenant capabilities with shared APIs</div>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Developer Experience</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Modern stack but Azure DevOps + Kubernetes complexity</div>
                         </td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">WordPress Multisite available but can be complex</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Familiar to many developers, large community, but legacy architecture</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Strong project management, cross-dataset references</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Outstanding studio experience, live previews, excellent developer tools</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Strapi multi-tenant + Astro can build multiple sites from same content</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Excellent DX - Astro's intuitive components + Strapi's flexible backend</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Multi-site Management</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Good multi-tenant capabilities with shared APIs</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">WordPress Multisite available but can be complex</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Strong project management, cross-dataset references</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Strapi multi-tenant + Astro can build multiple sites from same content</div>
                         </td>
                     </tr>
                     
-                    <tr class="category-row">
-                        <td colspan="5"><strong>ORGANIZATIONAL FIT</strong></td>
+                    <tr class="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100">
+                        <td colspan="5" class="px-6 py-3 font-bold text-blue-900 text-lg">ORGANIZATIONAL FIT</td>
                     </tr>
                     <tr>
-                        <td class="criteria-cell">Content Editor Experience</td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">Clean interface but newer, less familiar to content teams</div>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Content Editor Experience</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Clean interface but newer, less familiar to content teams</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Familiar interface, extensive plugins, easy for non-technical users</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Familiar interface, extensive plugins, easy for non-technical users</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Outstanding real-time collaborative editing experience</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Outstanding real-time collaborative editing experience</div>
                         </td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Same great Strapi editor experience with faster frontend delivery</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="criteria-cell">Workflow & Governance</td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">Basic workflow capabilities, would need custom development</div>
-                        </td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">Plugin-based workflows, varies by setup quality</div>
-                        </td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Flexible workflow system, good permission management</div>
-                        </td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Strapi's role-based permissions + build-time validation</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Same great Strapi editor experience with faster frontend delivery</div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="criteria-cell">Team Learning Curve</td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">Moderate - new CMS + complex infrastructure</div>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Workflow & Governance</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Basic workflow capabilities, would need custom development</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Minimal - most teams already familiar with WordPress</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Plugin-based workflows, varies by setup quality</div>
                         </td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Moderate - intuitive but different paradigm</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Flexible workflow system, good permission management</div>
                         </td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">Moderate - Astro is newer but Strapi admin is intuitive</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Strapi's role-based permissions + build-time validation</div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="criteria-cell">Vendor Support</td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Strong Microsoft enterprise support</div>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Team Learning Curve</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Moderate - new CMS + complex infrastructure</div>
                         </td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">Varies by hosting provider, community support strong</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Minimal - most teams already familiar with WordPress</div>
                         </td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Excellent support team, strong community</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Moderate - intuitive but different paradigm</div>
                         </td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">Strapi has commercial support options + active Astro community</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Moderate - Astro is newer but Strapi admin is intuitive</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Vendor Support</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Strong Microsoft enterprise support</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Varies by hosting provider, community support strong</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Excellent support team, strong community</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Strapi has commercial support options + active Astro community</div>
                         </td>
                     </tr>
                     
-                    <tr class="category-row">
-                        <td colspan="5"><strong>STRATEGIC ALIGNMENT</strong></td>
+                    <tr class="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100">
+                        <td colspan="5" class="px-6 py-3 font-bold text-blue-900 text-lg">STRATEGIC ALIGNMENT</td>
                     </tr>
                     <tr>
-                        <td class="criteria-cell">50M Americans Goal</td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Excellent scalability but complex architecture</div>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">50M Americans Goal</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Excellent scalability but complex architecture</div>
                         </td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">Can scale but requires careful optimization</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Can scale but requires careful optimization</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Excellent global performance and scalability</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Excellent global performance and scalability</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Astro's static generation + CDN = optimal for massive scale</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="criteria-cell">Digital Maturity Advancement</td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Modern architecture supports Nascent→Emerging progression</div>
-                        </td>
-                        <td>
-                            <span class="score fair">2</span>
-                            <div class="details">Limited digital maturity advancement potential</div>
-                        </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Cutting-edge architecture, real-time capabilities</div>
-                        </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Islands architecture = cutting-edge performance + modern DX</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Astro's static generation + CDN = optimal for massive scale</div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="criteria-cell">Integration Capabilities</td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Excellent API ecosystem, Azure B2C integration</div>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Digital Maturity Advancement</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Modern architecture supports Nascent→Emerging progression</div>
                         </td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Strong plugin ecosystem, REST API available</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-bold text-sm shadow-sm">2</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Limited digital maturity advancement potential</div>
                         </td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Flexible APIs, webhooks, good integration options</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Cutting-edge architecture, real-time capabilities</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Strapi's integration flexibility + Astro's API routes</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Islands architecture = cutting-edge performance + modern DX</div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="criteria-cell">Mobile-First Accessibility</td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">React enables mobile-first, accessibility requires development</div>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Integration Capabilities</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Excellent API ecosystem, Azure B2C integration</div>
                         </td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">Theme-dependent, accessibility varies</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Strong plugin ecosystem, REST API available</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Next.js framework, excellent mobile performance</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Flexible APIs, webhooks, good integration options</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Astro's minimal JS = exceptional mobile performance + accessibility</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Strapi's integration flexibility + Astro's API routes</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Mobile-First Accessibility</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">React enables mobile-first, accessibility requires development</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Theme-dependent, accessibility varies</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Next.js framework, excellent mobile performance</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Astro's minimal JS = exceptional mobile performance + accessibility</div>
                         </td>
                     </tr>
                     
-                    <tr class="category-row">
-                        <td colspan="5"><strong>COST & RISK</strong></td>
+                    <tr class="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100">
+                        <td colspan="5" class="px-6 py-3 font-bold text-blue-900 text-lg">COST & RISK</td>
                     </tr>
                     <tr>
-                        <td class="criteria-cell">Implementation Cost</td>
-                        <td>
-                            <span class="score fair">2</span>
-                            <div class="details">High - complex Azure setup, Kubernetes, custom development</div>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Implementation Cost</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-bold text-sm shadow-sm">2</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">High - complex Azure setup, Kubernetes, custom development</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Low - existing expertise, managed hosting options</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Low - existing expertise, managed hosting options</div>
                         </td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Moderate - similar to Contentful implementation</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Moderate - similar to Contentful implementation</div>
                         </td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Moderate - new frontend but leverages open-source tools</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="criteria-cell">Ongoing Operational Cost</td>
-                        <td>
-                            <span class="score fair">2</span>
-                            <div class="details">High - Azure, SQL Server licensing, Kubernetes management</div>
-                        </td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">Low to moderate - depends on hosting tier selected</div>
-                        </td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">Moderate - competitive pricing, scales with content</div>
-                        </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Low - Strapi open source + Astro static hosting is very cost-effective</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Moderate - new frontend but leverages open-source tools</div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="criteria-cell">Vendor Lock-in Risk</td>
-                        <td>
-                            <span class="score fair">2</span>
-                            <div class="details">High Microsoft dependency, complex migration</div>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Ongoing Operational Cost</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-bold text-sm shadow-sm">2</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">High - Azure, SQL Server licensing, Kubernetes management</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Low - open source, portable, many hosting options</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Low to moderate - depends on hosting tier selected</div>
                         </td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">Moderate - good export capabilities, standard APIs</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Moderate - competitive pricing, scales with content</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">Very low - both Strapi and Astro are open source</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Low - Strapi open source + Astro static hosting is very cost-effective</div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="criteria-cell">Time to Implementation</td>
-                        <td>
-                            <span class="score fair">2</span>
-                            <div class="details">6-12 months - complex infrastructure setup</div>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Vendor Lock-in Risk</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-bold text-sm shadow-sm">2</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">High Microsoft dependency, complex migration</div>
                         </td>
-                        <td>
-                            <span class="score excellent">5</span>
-                            <div class="details">2-4 months - leverages existing knowledge</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Low - open source, portable, many hosting options</div>
                         </td>
-                        <td>
-                            <span class="score very-good">4</span>
-                            <div class="details">3-6 months - similar to Contentful timeline</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Moderate - good export capabilities, standard APIs</div>
                         </td>
-                        <td>
-                            <span class="score good">3</span>
-                            <div class="details">4-7 months - Astro learning curve but faster once mastered</div>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">Very low - both Strapi and Astro are open source</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-semibold text-gray-800 align-top">Time to Implementation</td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-bold text-sm shadow-sm">2</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">6-12 months - complex infrastructure setup</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">2-4 months - leverages existing knowledge</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">4</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">3-6 months - similar to Contentful timeline</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">3</span>
+                            <div class="text-xs text-gray-600 mt-2 leading-relaxed">4-7 months - Astro learning curve but faster once mastered</div>
                         </td>
                     </tr>
                     
-                    <tr class="total-row">
-                        <td class="criteria-cell"><strong>TOTAL SCORE</strong></td>
-                        <td class="total-score">52/80</td>
-                        <td class="total-score">61/80</td>
-                        <td class="total-score">74/80</td>
-                        <td class="total-score">70/80</td>
+                    <tr class="bg-gradient-to-r from-gray-100 to-gray-200 font-bold border-t-2 border-gray-300">
+                        <td class="px-6 py-4 text-gray-800">TOTAL SCORE</td>
+                        <td class="px-6 py-4 text-center text-lg">52/80</td>
+                        <td class="px-6 py-4 text-center text-lg">61/80</td>
+                        <td class="px-6 py-4 text-center text-lg">74/80</td>
+                        <td class="px-6 py-4 text-center text-lg">70/80</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         
-        <div class="legend">
-            <h3>Scoring Legend</h3>
-            <div class="legend-item">
-                <span class="score excellent">5 - Excellent</span>
-            </div>
-            <div class="legend-item">
-                <span class="score very-good">4 - Very Good</span>
-            </div>
-            <div class="legend-item">
-                <span class="score good">3 - Good</span>
-            </div>
-            <div class="legend-item">
-                <span class="score fair">2 - Fair</span>
-            </div>
-            <div class="legend-item">
-                <span class="score poor">1 - Poor</span>
+        <div class="mt-10 p-8 bg-white rounded-xl shadow-lg border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-800 mb-6">Scoring Legend</h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 font-bold text-sm shadow-sm">5</span>
+                    <span class="text-gray-700 font-medium">Excellent</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-bold text-sm shadow-sm">4</span>
+                    <span class="text-gray-700 font-medium">Very Good</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-800 font-bold text-sm shadow-sm">3</span>
+                    <span class="text-gray-700 font-medium">Good</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-800 font-bold text-sm shadow-sm">2</span>
+                    <span class="text-gray-700 font-medium">Fair</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-100 text-red-800 font-bold text-sm shadow-sm">1</span>
+                    <span class="text-gray-700 font-medium">Poor</span>
+                </div>
             </div>
         </div>
     </div>
